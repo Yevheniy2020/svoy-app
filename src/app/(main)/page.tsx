@@ -1,9 +1,9 @@
 'use client';
 import { Typography } from '@mui/material';
 
-import ButtonLink from '@/components/common/button-link/ButtonLink';
+import ButtonLink from '@/components/common/ui/button-link/ButtonLink';
 
-import * as styles from './testStyles.styles';
+import * as styles from '../testStyles.styles';
 
 export default function Home() {
   return (
