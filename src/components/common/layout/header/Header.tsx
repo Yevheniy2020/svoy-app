@@ -3,7 +3,7 @@ import React, { FC } from 'react';
 import { Box, List, ListItem, ListItemButton, Typography } from '@mui/material';
 import Link from 'next/link';
 
-import ArrowRightIcon from '@/components/common/icon/arrow-right';
+import ArrowBottomIcon from '@/components/common/icon/arrow-bottom';
 import MainLogoIcon from '@/components/common/icon/main-logo';
 
 import * as styles from './Header.styles';
@@ -32,7 +32,7 @@ const Header: FC = () => {
         <ListItem disablePadding>
           <ListItemButton disableRipple sx={styles.button}>
             <Typography sx={styles.text}>EN</Typography>
-            <ArrowRightIcon />
+            <ArrowBottomIcon />
           </ListItemButton>
         </ListItem>
       </List>

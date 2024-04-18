@@ -28,7 +28,7 @@ export const text = {
     left: '0',
     width: '0',
     height: '1px',
-    backgroundColor: 'black',
+    backgroundColor: theme.palette.dark.main,
     transition: 'width .3s',
   },
 };
