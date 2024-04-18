@@ -18,19 +18,19 @@ const Header: FC = () => {
       </Link>
       <List sx={styles.navigation}>
         <ListItem sx={styles.item} disablePadding>
-          <ListItemButton sx={styles.button}>
+          <ListItemButton disableRipple sx={styles.button}>
             <Typography sx={styles.text}>for ukrainians</Typography>
           </ListItemButton>
         </ListItem>
         {navItems.map(item => (
           <ListItem key={item} disablePadding>
-            <ListItemButton sx={styles.button}>
+            <ListItemButton disableRipple sx={styles.button}>
               <Typography sx={styles.text}>{item}</Typography>
             </ListItemButton>
           </ListItem>
         ))}
         <ListItem disablePadding>
-          <ListItemButton sx={styles.button}>
+          <ListItemButton disableRipple sx={styles.button}>
             <Typography sx={styles.text}>EN</Typography>
             <ArrowRightIcon />
           </ListItemButton>

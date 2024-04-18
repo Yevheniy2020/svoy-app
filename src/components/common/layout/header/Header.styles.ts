@@ -18,11 +18,31 @@ export const text = {
   textWrap: 'nowrap',
   typography: theme.typography.h7SemiBold,
   color: theme.palette.dark.main,
+  position: 'relative',
+
+  '&::after': {
+    content: "''",
+    display: 'block',
+    position: 'absolute',
+    bottom: '-1px',
+    left: '0',
+    width: '0',
+    height: '1px',
+    backgroundColor: 'black',
+    transition: 'width .3s',
+  },
 };
 
 export const button = {
   gap: '8px',
   textAlign: 'center',
+
+  '&:hover': {
+    backgroundColor: 'transparent',
+    '& p': {
+      '&::after': { width: '100%' },
+    },
+  },
 };
 
 export const item = {
