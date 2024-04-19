@@ -3,10 +3,13 @@ import { SxProps, Theme } from '@mui/material';
 import theme from '@/styles/theme/constants';
 
 export const wrapper = {
-  overflow: 'hidden',
-  borderRadius: '100px',
   display: 'flex',
   alignItems: 'center',
+};
+
+export const hidden = {
+  overflow: 'hidden',
+  borderRadius: '100px',
 };
 
 export const hoverText = {
@@ -50,7 +53,7 @@ export const link = (
       width: `${width}`,
       height: `${width}`,
       zIndex: '0',
-      transition: 'bottom .4s',
+      transition: 'bottom .3s',
       borderRadius: '100%',
       background:
         'linear-gradient(90deg, rgba(0,87,184,1) 0%, rgba(255,215,0,1) 100%)',
@@ -98,8 +101,8 @@ export const hover = {
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-  transition: 'gap .3s',
-  gap: '4px',
+  transition: 'opacity .6s, gap .3s',
+  gap: '0px',
 };
 
 export const text = (variant: 'circle' | 'rectangle'): SxProps<Theme> => ({
