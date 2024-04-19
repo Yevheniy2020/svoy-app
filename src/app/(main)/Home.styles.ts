@@ -54,11 +54,11 @@ export const part2Text = {
 };
 
 export const part2Button = {
-  width: '293px',
+  // width: '293px',
 };
 
 export const part3Button = {
-  width: '310px',
+  mt: '2px',
   '&::before': {
     backgroundImage: 'none',
   },
@@ -67,6 +67,16 @@ export const part3Button = {
     '-webkit-text-fill-color': theme.palette.dark.main,
     '-moz-text-fill-color': theme.palette.dark.main,
   },
+  '&:hover': {
+    '& p': {
+      '-webkit-text-fill-color': theme.palette.white.main,
+      '-moz-text-fill-color': theme.palette.white.main,
+    },
+  },
+  '&::after': {
+    background: `${theme.palette.orange.main}`,
+  },
+
   border: '2px solid',
   borderColor: theme.palette.dark.main,
 };

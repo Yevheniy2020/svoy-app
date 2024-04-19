@@ -3,6 +3,8 @@ import React from 'react';
 import { Box, Typography } from '@mui/material';
 
 import ArrowRightIcon from '@/components/common/icon/arrow-right';
+import ArrowRightWhiteIcon from '@/components/common/icon/arrow-right-white';
+import TridentIcon from '@/components/common/icon/trident';
 import ButtonLink from '@/components/common/ui/button-link';
 
 import * as styles from './Home.styles';
@@ -18,7 +20,10 @@ export default function Home() {
         <ButtonLink
           sx={styles.part2Button}
           content="SUPPORT UKRAINE"
+          width={'293px'}
           variant="rectangle"
+          //leftIcon={<ArrowRightIcon />}
+          leftIcon={[, <TridentIcon key={0} />]}
         />
         <Typography sx={styles.part2Text}>REAL ESTATE</Typography>
       </Box>
@@ -27,8 +32,13 @@ export default function Home() {
         <ButtonLink
           sx={styles.part3Button}
           content="WHOLE COLLECTION"
+          width={'310px'}
           variant="rectangle"
-          rightIcon={<ArrowRightIcon />}
+          rightIcon={[
+            <ArrowRightIcon key={0} />,
+
+            <ArrowRightWhiteIcon key={1} />,
+          ]}
         />
       </Box>
     </Box>
