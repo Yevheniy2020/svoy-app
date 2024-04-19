@@ -5,11 +5,12 @@ import { Box } from '@mui/material';
 import ArrowRightIcon from '@/components/common/icon/arrow-right';
 import ArrowRightWhiteIcon from '@/components/common/icon/arrow-right-white';
 import TridentIcon from '@/components/common/icon/trident';
-import ButtonLink from '@/components/common/ui/button-link';
 
-import * as styles from './ButtonLinkPage.styles';
+import ButtonRectangle from '../../../common/ui/button-rectangle';
 
-const ButtonLinkPage: FC = () => {
+import * as styles from './ButtonRectanglePage.styles';
+
+const ButtonRectanglePage: FC = () => {
   return (
     <Box
       sx={{
@@ -20,55 +21,48 @@ const ButtonLinkPage: FC = () => {
       }}
     >
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-        <ButtonLink
+        <ButtonRectangle
           sx={styles.button1}
           content="WHOLE COLLECTION"
           width={'400px'}
-          variant="rectangle"
         />
-        <ButtonLink
+        <ButtonRectangle
           sx={styles.button1}
           content="WHOLE COLLECTION"
           width={'400px'}
-          variant="rectangle"
           rightIcon={[<ArrowRightIcon key={0} />]}
         />
-        <ButtonLink
+        <ButtonRectangle
           sx={styles.button1}
           content="WHOLE COLLECTION"
           width={'400px'}
-          variant="rectangle"
           rightIcon={[, <ArrowRightIcon key={0} />]}
         />
-        <ButtonLink
+        <ButtonRectangle
           sx={styles.button1}
           content="WHOLE COLLECTION"
           width={'400px'}
-          variant="rectangle"
           leftIcon={[<ArrowRightIcon key={0} />]}
         />
-        <ButtonLink
+        <ButtonRectangle
           sx={styles.button1}
           content="WHOLE COLLECTION"
           width={'400px'}
-          variant="rectangle"
           leftIcon={[, <ArrowRightIcon key={0} />]}
         />
-        <ButtonLink
+        <ButtonRectangle
           sx={styles.button1}
           content="WHOLE COLLECTION"
           width={'400px'}
-          variant="rectangle"
           leftIcon={[
             <ArrowRightIcon key={0} />,
             <ArrowRightWhiteIcon key={1} />,
           ]}
         />
-        <ButtonLink
+        <ButtonRectangle
           sx={styles.button1}
           content="WHOLE COLLECTION"
           width={'400px'}
-          variant="rectangle"
           rightIcon={[
             <ArrowRightIcon key={0} />,
             <ArrowRightWhiteIcon key={1} />,
@@ -76,45 +70,35 @@ const ButtonLinkPage: FC = () => {
         />
       </Box>
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-        <ButtonLink
+        <ButtonRectangle content="WHOLE COLLECTION" width={'400px'} />
+        <ButtonRectangle
           content="WHOLE COLLECTION"
           width={'400px'}
-          variant="rectangle"
-        />
-        <ButtonLink
-          content="WHOLE COLLECTION"
-          width={'400px'}
-          variant="rectangle"
           rightIcon={[<ArrowRightIcon key={0} />]}
         />
-        <ButtonLink
+        <ButtonRectangle
           content="WHOLE COLLECTION"
           width={'400px'}
-          variant="rectangle"
           rightIcon={[, <TridentIcon key={0} />]}
         />
-        <ButtonLink
+        <ButtonRectangle
           content="WHOLE COLLECTION"
           width={'400px'}
-          variant="rectangle"
           leftIcon={[<ArrowRightIcon key={0} />]}
         />
-        <ButtonLink
+        <ButtonRectangle
           content="WHOLE COLLECTION"
           width={'400px'}
-          variant="rectangle"
           leftIcon={[, <TridentIcon key={0} />]}
         />
-        <ButtonLink
+        <ButtonRectangle
           content="WHOLE COLLECTION"
           width={'400px'}
-          variant="rectangle"
           leftIcon={[<ArrowRightIcon key={0} />, <TridentIcon key={1} />]}
         />
-        <ButtonLink
+        <ButtonRectangle
           content="WHOLE COLLECTION"
           width={'400px'}
-          variant="rectangle"
           rightIcon={[<ArrowRightIcon key={0} />, <TridentIcon key={1} />]}
         />
       </Box>
@@ -122,4 +106,4 @@ const ButtonLinkPage: FC = () => {
   );
 };
 
-export default ButtonLinkPage;
+export default ButtonRectanglePage;

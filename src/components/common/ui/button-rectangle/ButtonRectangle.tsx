@@ -3,12 +3,10 @@ import { Box, SxProps, Theme, Typography } from '@mui/material';
 
 import mergeSx from '@/lib/utils/mergeSxStyles';
 
-import * as styles from './ButtonLink.styles';
+import * as styles from './ButtonRectangle.styles';
 
-interface ButtonProps {
+interface ButtonRectangleProps {
   content: string | ReactNode;
-  //if there are more variant need use enum
-  variant: 'circle' | 'rectangle';
   //first icon - default icon for button
   //second icon - icon for hover effect
   rightIcon?: [ReactNode?, ReactNode?];
@@ -19,9 +17,8 @@ interface ButtonProps {
   onClick?: () => void;
 }
 
-const ButtonLink: FC<ButtonProps> = ({
+const ButtonRectangle: FC<ButtonRectangleProps> = ({
   content,
-  variant,
   leftIcon,
   rightIcon,
   width,
@@ -34,13 +31,13 @@ const ButtonLink: FC<ButtonProps> = ({
     <Box sx={styles.wrapper}>
       <Box sx={styles.hidden}>
         <Box
-          sx={mergeSx(styles.link(variant, width, height), sx)}
+          sx={mergeSx(styles.link(width, height), sx)}
           onClick={onClick}
           {...rest}
         >
           <Box sx={styles.proto}>
             {leftIcon && <Box>{leftIcon[0]}</Box>}
-            <Typography sx={styles.text(variant)}>{content}</Typography>
+            <Typography sx={styles.text}>{content}</Typography>
             {rightIcon && <Box>{rightIcon[0]}</Box>}
           </Box>
           <Box sx={styles.hover}>
@@ -54,4 +51,4 @@ const ButtonLink: FC<ButtonProps> = ({
   );
 };
 
-export default ButtonLink;
+export default ButtonRectangle;
