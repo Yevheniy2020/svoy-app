@@ -7,7 +7,10 @@ import * as styles from './ButtonLink.styles';
 
 interface ButtonProps {
   content: string | ReactNode;
+  //if there are more variant need use enum
   variant: 'circle' | 'rectangle';
+  //first icon - default icon for button
+  //second icon - icon for hover effect
   rightIcon?: [ReactNode?, ReactNode?];
   leftIcon?: [ReactNode?, ReactNode?];
   width: string;

@@ -1,5 +1,10 @@
 import theme from '@/styles/theme/constants';
 
+export const wrapper = {
+  background: theme.palette.body.main,
+  position: 'relative',
+  zIndex: '0',
+};
 export const container = {
   maxWidth: '1200px',
   width: '100%',
@@ -7,7 +12,7 @@ export const container = {
 };
 
 export const part1 = {
-  mt: '95px',
+  pt: '95px',
   display: 'flex',
   justifyContent: 'center',
   gap: '47px',
@@ -54,11 +59,13 @@ export const part2Text = {
 };
 
 export const part2Button = {
-  // width: '293px',
+  background: theme.palette.body.main,
 };
 
 export const part3Button = {
   mt: '2px',
+  background: theme.palette.body.main,
+
   '&::before': {
     backgroundImage: 'none',
   },

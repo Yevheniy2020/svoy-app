@@ -25,7 +25,6 @@ export const link = (
 ): SxProps<Theme> => ({
   cursor: 'pointer',
   position: 'relative',
-
   svg: {
     display: 'flex',
   },
@@ -38,12 +37,13 @@ export const link = (
   }),
 
   ...(variant === 'rectangle' && {
+    //due to margin which need gradient
     height: `calc(${height} - 4px)`,
     width: `calc(${width} - 4px)`,
     background: 'white',
     margin: '2px',
     borderRadius: '100px',
-
+    //gradient for hover
     '&::after': {
       content: "''",
       position: 'absolute',
@@ -53,20 +53,11 @@ export const link = (
       width: `${width}`,
       height: `${width}`,
       zIndex: '0',
-      transition: 'bottom .3s',
+      transition: 'bottom .5s',
       borderRadius: '100%',
-      background:
-        'linear-gradient(90deg, rgba(0,87,184,1) 0%, rgba(255,215,0,1) 100%)',
+      background: theme.palette.gradient.main,
     },
-    '&:hover::after': {
-      bottom: `calc(-${width} / 2.65)`,
-    },
-    '&:hover': {
-      '& div': {
-        opacity: '1',
-        gap: '12px',
-      },
-    },
+    //gradient for border
     '&::before': {
       content: "''",
       position: 'absolute',
@@ -77,8 +68,16 @@ export const link = (
       zIndex: '-1',
       margin: '-2px',
       borderRadius: 'inherit',
-      backgroundImage:
-        'linear-gradient(90deg, rgba(0,87,184,1) 0%, rgba(255,215,0,1) 100%)',
+      backgroundImage: theme.palette.gradient.main,
+    },
+    '&:hover::after': {
+      bottom: `calc(-${width} / 2.65)`,
+    },
+    '&:hover': {
+      '& div': {
+        opacity: '1',
+        gap: '12px',
+      },
     },
   }),
 });
@@ -109,11 +108,9 @@ export const text = (variant: 'circle' | 'rectangle'): SxProps<Theme> => ({
   textTransform: 'uppercase',
   typography: theme.typography.h6SemiBold,
   color: theme.palette.white.main,
-
+  //gradient text
   ...(variant === 'rectangle' && {
-    backgroundImage:
-      'linear-gradient(90deg, rgba(0,87,184,1) 0%, rgba(255,215,0,1) 100%)',
-
+    backgroundImage: theme.palette.gradient.main,
     '-webkit-background-clip': 'text',
     '-webkit-text-fill-color': 'transparent',
     '-moz-background-clip': 'text',
