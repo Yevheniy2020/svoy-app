@@ -8,13 +8,17 @@ export const circle = (delay: string) => ({
       opacity: '1',
       transform: 'scale(0.1)',
     },
-    '100%': {
+    '70%': {
       opacity: '0',
       transform: 'scale(1)',
     },
+    '100%': {
+      opacity: '0',
+      transform: 'scale(0)',
+    },
   },
 
-  border: `3px solid ${theme.palette.orange.main}`,
+  border: `4px solid ${theme.palette.orange.main}`,
   animation: 'growAndFade 2s infinite ease',
   animationDelay: delay,
 });
@@ -25,16 +29,20 @@ export const circleCenter = (delay: string) => ({
       opacity: '1',
       transform: 'scale(0.2)',
     },
-    '50%': {
+    '10%': {
       opacity: '1',
       transform: 'scale(0.2)',
     },
-    '100%': {
+    '70%': {
       opacity: '0',
       transform: 'scale(1)',
     },
+    '100%': {
+      opacity: '0',
+      transform: 'scale(0)',
+    },
   },
-  border: `3px solid ${theme.palette.orange.main}`,
+  border: `4px solid ${theme.palette.orange.main}`,
   animation: 'growAndFade 2s infinite ease',
   animationDelay: delay,
 });

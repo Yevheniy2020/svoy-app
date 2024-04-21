@@ -22,8 +22,25 @@ export const part1 = {
   pt: '95px',
   display: 'flex',
   justifyContent: 'center',
+  position: 'relative',
   gap: '47px',
   typography: theme.typography.h1Regular,
+};
+
+export const part1Relative = {
+  position: 'relative',
+};
+
+export const part1Circle = {
+  position: 'absolute',
+  left: '30px',
+  top: '-100px',
+  background: theme.palette.orange.main,
+  margin: '0',
+  '&::before': {
+    margin: '0',
+    backgroundImage: 'none',
+  },
 };
 
 export const part1Text = {
@@ -105,6 +122,14 @@ export const part4Text = {
 export const img1 = {
   display: 'flex',
   pt: '133px',
+  position: 'relative',
+};
+
+export const ripple = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%,-50%)',
 };
 
 export const img3 = {

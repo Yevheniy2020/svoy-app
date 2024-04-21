@@ -7,6 +7,7 @@ import ArrowRightIcon from '@/components/common/icon/arrow-right';
 import ArrowRightWhiteIcon from '@/components/common/icon/arrow-right-white';
 import TridentIcon from '@/components/common/icon/trident';
 import ButtonCircle from '@/components/common/ui/button-circle';
+import RippleEffect from '@/components/common/ui/ripple-effect';
 
 import ButtonRectangle from '../../components/common/ui/button-rectangle';
 
@@ -18,8 +19,15 @@ export default function Home() {
       <Box sx={styles.wrapperTop}>
         <Box sx={styles.container}>
           <Box sx={styles.part1}>
-            <Typography sx={styles.part1Text}>RENT</Typography>/
-            <Typography sx={styles.part1Text}>BUY</Typography>
+            <Box sx={styles.part1Relative}>
+              <Typography sx={styles.part1Text}>RENT</Typography>
+              <ButtonCircle
+                sx={styles.part1Circle}
+                content="EXPLORE"
+                width="180px"
+              />
+            </Box>
+            /<Typography sx={styles.part1Text}>BUY</Typography>
           </Box>
           <Box sx={styles.part2}>
             <ButtonRectangle
@@ -50,6 +58,9 @@ export default function Home() {
               height={130}
               alt={'the beautiful house'}
             />
+            <Box sx={styles.ripple}>
+              <RippleEffect width="180px" height="180px" />
+            </Box>
           </Box>
         </Box>
       </Box>
