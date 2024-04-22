@@ -6,11 +6,10 @@ import Image from 'next/image';
 import ArrowRightIcon from '@/components/common/icon/arrow-right';
 import ArrowRightWhiteIcon from '@/components/common/icon/arrow-right-white';
 import TridentIcon from '@/components/common/icon/trident';
-import ButtonCircle from '@/components/common/ui/button-circle';
+import ButtonMagnetic from '@/components/common/ui/button-magnetic';
+import ButtonRectangle from '@/components/common/ui/button-rectangle';
 import CursorCircle from '@/components/common/ui/cursor-cirlce';
 import RippleEffect from '@/components/common/ui/ripple-effect';
-
-import ButtonRectangle from '../../components/common/ui/button-rectangle';
 
 import * as styles from './Home.styles';
 
@@ -49,7 +48,7 @@ export default function Home() {
               sx={styles.part2Button}
               content="SUPPORT UKRAINE"
               width={'293px'}
-              leftIcon={[, <TridentIcon key={0} />]}
+              leftIcon={[undefined, <TridentIcon key={0} />]}
             />
             <Typography sx={styles.part2Text}>REAL ESTATE</Typography>
           </Box>
@@ -81,38 +80,35 @@ export default function Home() {
       </Box>
       <Box sx={styles.wrapperBottom}>
         <Box sx={styles.container}>
-          <Box sx={styles.flex}>
-            <Box sx={styles.left}>
+          <Box sx={styles.left}>
+            <Image
+              src="/img/main/img2.jpg"
+              width={543}
+              height={691}
+              alt={'the beautiful house'}
+            />
+            <Box sx={styles.img3}>
               <Image
-                src="/img/main/img2.jpg"
-                width={543}
-                height={691}
+                src="/img/main/img3.jpg"
+                width={387}
+                height={240}
                 alt={'the beautiful house'}
               />
-              <Box sx={styles.img3}>
-                <Image
-                  src="/img/main/img3.jpg"
-                  width={387}
-                  height={240}
-                  alt={'the beautiful house'}
-                />
-              </Box>
-              <ButtonCircle
-                sx={styles.buttonCircle}
-                hover={true}
-                content={'LEARN MORE'}
-                width="180px"
-              />
-              <Box sx={styles.right}>
-                <Typography sx={styles.rightText1}>WHAT</Typography>
-                <Typography sx={styles.rightText2}>we offer</Typography>
-                <Typography sx={styles.rightText3}>
-                  Our architecture encourages co-existence. So does our business
-                  philosophy. We have abolished barriers of hierarchy and
-                  departmentalization to work as a single team. We believe in
-                  full transparency — and of course, that entails our clients.
-                </Typography>
-              </Box>
+            </Box>
+            <ButtonMagnetic
+              width="180px"
+              content="LEARN MORE"
+              sx={styles.buttonCircle}
+            />
+            <Box sx={styles.right}>
+              <Typography sx={styles.rightText1}>WHAT</Typography>
+              <Typography sx={styles.rightText2}>we offer</Typography>
+              <Typography sx={styles.rightText3}>
+                Our architecture encourages co-existence. So does our business
+                philosophy. We have abolished barriers of hierarchy and
+                departmentalization to work as a single team. We believe in full
+                transparency — and of course, that entails our clients.
+              </Typography>
             </Box>
           </Box>
         </Box>

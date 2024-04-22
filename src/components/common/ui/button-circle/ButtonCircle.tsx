@@ -1,16 +1,17 @@
-import React, { FC, ReactNode } from 'react';
+import React, { FC, MutableRefObject, ReactNode } from 'react';
 import { Box, SxProps, Theme, Typography } from '@mui/material';
 
 import mergeSx from '@/lib/utils/mergeSxStyles';
 
 import * as styles from './ButtonCircle.styles';
 
-interface ButtonCircleProps {
+export interface ButtonCircleProps {
   content: string | ReactNode;
   width: string;
   sx?: SxProps<Theme>;
   onClick?: () => void;
   hover?: boolean;
+  buttonRef?: MutableRefObject<HTMLElement | null>;
 }
 const ButtonCircle: FC<ButtonCircleProps> = ({
   content,
@@ -18,6 +19,7 @@ const ButtonCircle: FC<ButtonCircleProps> = ({
   sx = {},
   onClick,
   hover = false,
+  buttonRef,
   ...rest
 }) => {
   return (
@@ -25,6 +27,7 @@ const ButtonCircle: FC<ButtonCircleProps> = ({
       sx={mergeSx(styles.link(width, hover), sx)}
       onClick={onClick}
       {...rest}
+      ref={buttonRef}
     >
       <Typography sx={styles.text}>{content}</Typography>
     </Box>

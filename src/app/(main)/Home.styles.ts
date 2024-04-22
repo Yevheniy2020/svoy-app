@@ -31,18 +31,6 @@ export const part1Relative = {
   position: 'relative',
 };
 
-export const part1Circle = {
-  position: 'absolute',
-  left: '30px',
-  top: '-100px',
-  background: theme.palette.orange.main,
-  margin: '0',
-  '&::before': {
-    margin: '0',
-    backgroundImage: 'none',
-  },
-};
-
 export const part1Text = {
   typography: theme.typography.h1Regular,
   color: theme.palette.dark.main,
@@ -143,28 +131,10 @@ export const left = {
   width: '543px',
 };
 
-export const flex = {
-  // display: 'flex',
-  // gap: '247px',
-};
-
 export const buttonCircle = {
   position: 'absolute',
   bottom: '-76px',
   right: '-259px',
-
-  background: 'transparent',
-  border: `2px solid ${theme.palette.white.main}`,
-  margin: '0',
-  '&::before': {
-    margin: '0',
-    backgroundImage: 'none',
-  },
-  '&:hover': {
-    '& p': {
-      color: theme.palette.orange.main,
-    },
-  },
 };
 
 export const right = {
