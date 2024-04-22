@@ -60,8 +60,8 @@ export const part1Text = {
     backgroundColor: theme.palette.orange.main,
     transition: 'width .3s',
   },
-
   '&:hover': {
+    cursor: 'none',
     color: theme.palette.white.main,
     '-webkit-text-stroke': `2px ${theme.palette.dark.main}`,
     textStroke: `2px ${theme.palette.dark.main}`,

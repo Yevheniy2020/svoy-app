@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 import { Box, Typography } from '@mui/material';
 import Image from 'next/image';
 
@@ -7,6 +7,7 @@ import ArrowRightIcon from '@/components/common/icon/arrow-right';
 import ArrowRightWhiteIcon from '@/components/common/icon/arrow-right-white';
 import TridentIcon from '@/components/common/icon/trident';
 import ButtonCircle from '@/components/common/ui/button-circle';
+import CursorCircle from '@/components/common/ui/cursor-cirlce';
 import RippleEffect from '@/components/common/ui/ripple-effect';
 
 import ButtonRectangle from '../../components/common/ui/button-rectangle';
@@ -14,20 +15,34 @@ import ButtonRectangle from '../../components/common/ui/button-rectangle';
 import * as styles from './Home.styles';
 
 export default function Home() {
+  const [hovering, setHovering] = useState(false);
   return (
     <>
       <Box sx={styles.wrapperTop}>
         <Box sx={styles.container}>
           <Box sx={styles.part1}>
             <Box sx={styles.part1Relative}>
-              <Typography sx={styles.part1Text}>RENT</Typography>
-              <ButtonCircle
-                sx={styles.part1Circle}
-                content="EXPLORE"
-                width="180px"
-              />
+              <Typography
+                onMouseEnter={() => setHovering(true)}
+                onMouseLeave={() => setHovering(false)}
+                sx={styles.part1Text}
+              >
+                RENT
+              </Typography>
             </Box>
-            /<Typography sx={styles.part1Text}>BUY</Typography>
+            /
+            <Typography
+              onMouseEnter={() => setHovering(true)}
+              onMouseLeave={() => setHovering(false)}
+              sx={styles.part1Text}
+            >
+              BUY
+            </Typography>
+            <CursorCircle
+              text="EXPLORE"
+              width={hovering ? `180px` : '0'}
+              height={hovering ? `180px` : '0'}
+            />
           </Box>
           <Box sx={styles.part2}>
             <ButtonRectangle
