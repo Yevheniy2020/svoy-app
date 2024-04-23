@@ -37,11 +37,7 @@ export default function Home() {
             >
               BUY
             </Typography>
-            <CursorCircle
-              text="EXPLORE"
-              width={hovering ? `180px` : '0'}
-              height={hovering ? `180px` : '0'}
-            />
+            <CursorCircle text="EXPLORE" width={hovering ? `180px` : '0'} />
           </Box>
           <Box sx={styles.part2}>
             <ButtonRectangle

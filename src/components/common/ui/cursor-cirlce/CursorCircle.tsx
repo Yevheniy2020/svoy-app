@@ -1,21 +1,20 @@
 'use client';
 import React, { FC, useEffect, useState } from 'react';
-import { Box, SxProps, Theme, Typography } from '@mui/material';
+import { SxProps, Theme } from '@mui/material';
 
+import ButtonCircle from '@/components/common/ui/button-circle';
 import mergeSx from '@/lib/utils/mergeSxStyles';
 
 import * as styles from './CursorCircle.styles';
 
 interface CursorCircleProps {
   width: string;
-  height: string;
   text: string;
   sx?: SxProps<Theme>;
 }
 
 const CursorCircle: FC<CursorCircleProps> = ({
   width = '0',
-  height = '0',
   text,
   sx = {},
 }) => {
@@ -23,8 +22,8 @@ const CursorCircle: FC<CursorCircleProps> = ({
   const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
-    setIsActive(width !== '0' && height !== '0');
-  }, [width, height]);
+    setIsActive(width !== '0');
+  }, [width]);
 
   useEffect(() => {
     const updatePosition = (event: MouseEvent) => {
@@ -35,9 +34,11 @@ const CursorCircle: FC<CursorCircleProps> = ({
   }, []);
 
   return (
-    <Box sx={mergeSx(styles.cursor(position.x, position.y, width, height), sx)}>
-      {isActive && <Typography sx={styles.text}>{text}</Typography>}
-    </Box>
+    <ButtonCircle
+      sx={mergeSx(styles.cursorTest(position.x, position.y), sx)}
+      content={isActive && text}
+      width={width}
+    />
   );
 };
 

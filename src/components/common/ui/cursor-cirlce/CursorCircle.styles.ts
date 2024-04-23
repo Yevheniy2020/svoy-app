@@ -34,3 +34,19 @@ export const text = {
   color: theme.palette.white.main,
   transition: 'all 2s',
 };
+
+export const cursorTest = (left: number, top: number): SxProps<Theme> => ({
+  background: theme.palette.orange.main,
+  margin: '0',
+  '&::before': {
+    margin: '0',
+    backgroundImage: 'none',
+  },
+  position: 'fixed',
+  pointerEvents: 'none',
+  zIndex: '1',
+  transform: 'translate(-50%, -50%)',
+  left: `${left}px`,
+  top: `${top}px`,
+  transition: 'width 0.5s, height 0.5s',
+});
