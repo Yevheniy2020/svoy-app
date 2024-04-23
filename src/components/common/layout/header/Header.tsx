@@ -12,30 +12,32 @@ const navItems = ['Catalog', 'BUY', 'SELL', 'BLOG', 'About', 'Contact'];
 
 const Header: FC = () => {
   return (
-    <Box sx={styles.header}>
-      <Link href={'#'}>
-        <MainLogoIcon />
-      </Link>
-      <List sx={styles.navigation}>
-        <ListItem sx={styles.item} disablePadding>
-          <ListItemButton disableRipple sx={styles.button}>
-            <Typography sx={styles.text}>for ukrainians</Typography>
-          </ListItemButton>
-        </ListItem>
-        {navItems.map(item => (
-          <ListItem key={item} disablePadding>
+    <Box sx={styles.wrapper}>
+      <Box sx={styles.header}>
+        <Link href={'#'}>
+          <MainLogoIcon />
+        </Link>
+        <List sx={styles.navigation}>
+          <ListItem sx={styles.item} disablePadding>
             <ListItemButton disableRipple sx={styles.button}>
-              <Typography sx={styles.text}>{item}</Typography>
+              <Typography sx={styles.text}>for ukrainians</Typography>
             </ListItemButton>
           </ListItem>
-        ))}
-        <ListItem disablePadding>
-          <ListItemButton disableRipple sx={styles.button}>
-            <Typography sx={styles.text}>EN</Typography>
-            <ArrowBottomIcon />
-          </ListItemButton>
-        </ListItem>
-      </List>
+          {navItems.map(item => (
+            <ListItem key={item} disablePadding>
+              <ListItemButton disableRipple sx={styles.button}>
+                <Typography sx={styles.text}>{item}</Typography>
+              </ListItemButton>
+            </ListItem>
+          ))}
+          <ListItem disablePadding>
+            <ListItemButton disableRipple sx={styles.button}>
+              <Typography sx={styles.text}>EN</Typography>
+              <ArrowBottomIcon />
+            </ListItemButton>
+          </ListItem>
+        </List>
+      </Box>
     </Box>
   );
 };

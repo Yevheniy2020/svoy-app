@@ -1,5 +1,11 @@
 import theme from '@/styles/theme/constants';
 
+export const wrapper = {
+  background: theme.palette.body.main,
+  position: 'relative',
+  zIndex: '0',
+};
+
 export const header = {
   maxWidth: '1440px',
   padding: '0 9px 0 25px',
@@ -7,6 +13,7 @@ export const header = {
   alignItems: 'center',
   justifyContent: 'space-between',
   backgroundColor: theme.palette.body.main,
+  margin: '0 auto',
 };
 
 export const navigation = {
