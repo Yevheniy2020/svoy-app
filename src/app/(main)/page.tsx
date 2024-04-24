@@ -1,21 +1,9 @@
-'use client';
-import { Typography } from '@mui/material';
+import React, { FC } from 'react';
 
-import ButtonLink from '@/components/common/ui/button-link/ButtonLink';
+import MainPage from '@/components/screen/main-page';
 
-import * as styles from '../testStyles.styles';
+const Page: FC = () => {
+  return <MainPage />;
+};
 
-export default function Home() {
-  return (
-    <div>
-      <ButtonLink content="Hello world" variant="rectangle" />
-      <ButtonLink content="Hello world" variant="circle" />
-      <Typography sx={styles.test2}>
-        Whereas recognition of the inherent dignity
-      </Typography>
-      <Typography sx={styles.test}>
-        Whereas recognition of the inherent dignity
-      </Typography>
-    </div>
-  );
-}
+export default Page;
