@@ -8,7 +8,7 @@ export const wrapper = {
 
 export const header = {
   maxWidth: '1440px',
-  padding: '0 9px 0 25px',
+  padding: '20px  25px',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-between',
@@ -18,6 +18,8 @@ export const header = {
 
 export const navigation = {
   display: 'flex',
+  p: '0',
+  gap: '32px',
 };
 
 export const text = {
@@ -41,15 +43,19 @@ export const text = {
 };
 
 export const button = {
-  gap: '8px',
   textAlign: 'center',
-
+  p: '2px 0',
   '&:hover': {
     backgroundColor: 'transparent',
     '& p': {
       '&::after': { width: '100%' },
     },
   },
+};
+
+export const textLang = {
+  ...text,
+  mr: '8px',
 };
 
 export const item = {

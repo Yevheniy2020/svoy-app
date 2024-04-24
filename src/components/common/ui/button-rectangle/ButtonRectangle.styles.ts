@@ -82,6 +82,9 @@ export const hover = {
   alignItems: 'center',
   transition: 'all .6s',
   gap: '0px',
+  '& p': {
+    display: 'flex',
+  },
 };
 
 export const hoverText = {

@@ -44,32 +44,34 @@ const TopSection: FC = () => {
             sx={styles.part2Button}
             content="SUPPORT UKRAINE"
             width={'293px'}
-            leftIcon={[undefined, <TridentIcon key={0} />]}
+            leftIcon={[, <TridentIcon key={0} />]}
           />
           <Typography sx={styles.part2Text}>REAL ESTATE</Typography>
         </Box>
-        <Box sx={styles.part2}>
+        <Box sx={styles.part3}>
           <Typography sx={styles.part2Text}>WITH SVOY</Typography>
-          <ButtonRectangle
-            sx={styles.part3Button}
-            content="WHOLE COLLECTION"
-            width={'310px'}
-            rightIcon={[
-              <ArrowRightIcon key={0} />,
-              <ArrowRightWhiteIcon key={1} />,
-            ]}
-          />
+          <Box sx={styles.buttonWrapper}>
+            <ButtonRectangle
+              sx={styles.part3Button}
+              content="WHOLE COLLECTION"
+              width={'310px'}
+              rightIcon={[
+                <ArrowRightIcon key={0} />,
+                <ArrowRightWhiteIcon key={1} />,
+              ]}
+            />
+          </Box>
         </Box>
         <Typography sx={styles.part4Text}>REAL ESTATE AGENCY</Typography>
         <Box sx={styles.img1}>
           <Image
             src="/img/main/img1.jpg"
             width={1200}
-            height={130}
+            height={140}
             alt={'the beautiful house'}
           />
           <Box sx={styles.ripple}>
-            <RippleEffect width="180px" height="180px" />
+            <RippleEffect width="156px" height="156px" />
           </Box>
         </Box>
       </Container>

@@ -5,18 +5,13 @@ export const wrapper = {
   position: 'relative',
   zIndex: '0',
 };
-export const container = {
-  maxWidth: '1200px',
-  width: '100%',
-  margin: '0 auto',
-};
 
 export const part1 = {
-  pt: '95px',
+  pt: '91.45px',
   display: 'flex',
   justifyContent: 'center',
   position: 'relative',
-  gap: '47px',
+  gap: '45px',
   typography: theme.typography.h1Regular,
 };
 
@@ -67,8 +62,18 @@ export const part2Button = {
   background: theme.palette.body.main,
 };
 
+export const part3 = {
+  ...part2,
+  justifyContent: 'space-between',
+  alignItems: 'start',
+};
+
+export const buttonWrapper = {
+  mt: '14px',
+  mr: '5px',
+};
+
 export const part3Button = {
-  mt: '2px',
   background: theme.palette.body.main,
 
   '&::before': {
@@ -89,7 +94,7 @@ export const part3Button = {
     background: `${theme.palette.orange.main}`,
   },
 
-  border: '2px solid',
+  outline: '2px solid',
   borderColor: theme.palette.dark.main,
 };
 
@@ -97,18 +102,18 @@ export const part4Text = {
   textTransform: 'uppercase',
   typography: theme.typography.h6SemiBold,
   color: theme.palette.dark.main,
-  pl: '454px',
+  pl: '406px',
+  pb: '132px',
 };
 
 export const img1 = {
   display: 'flex',
-  pt: '133px',
   position: 'relative',
 };
 
 export const ripple = {
   position: 'absolute',
-  top: '50%',
+  top: '-80px',
   left: '50%',
-  transform: 'translate(-50%,-50%)',
+  transform: 'translateX(-52%)',
 };

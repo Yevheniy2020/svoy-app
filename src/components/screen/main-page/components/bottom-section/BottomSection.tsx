@@ -15,7 +15,7 @@ const BottomSection: FC = () => {
         <Box sx={styles.left}>
           <Image
             src="/img/main/img2.jpg"
-            width={543}
+            width={533}
             height={691}
             alt={'the beautiful house'}
           />

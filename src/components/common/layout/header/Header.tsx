@@ -8,13 +8,22 @@ import MainLogoIcon from '@/components/common/icon/main-logo';
 
 import * as styles from './Header.styles';
 
-const navItems = ['Catalog', 'BUY', 'SELL', 'BLOG', 'About', 'Contact'];
+const navItems = [
+  'Catalog',
+  'BUY',
+  'SELL',
+  'BLOG',
+  'About',
+  'SERVICES',
+  'Contact',
+];
 
 const Header: FC = () => {
   return (
     <Box sx={styles.wrapper}>
       <Box sx={styles.header}>
         <Link href={'#'}>
+          {/*break pixel perfect*/}
           <MainLogoIcon />
         </Link>
         <List sx={styles.navigation}>
@@ -32,7 +41,8 @@ const Header: FC = () => {
           ))}
           <ListItem disablePadding>
             <ListItemButton disableRipple sx={styles.button}>
-              <Typography sx={styles.text}>EN</Typography>
+              <Typography sx={styles.textLang}>ENG</Typography>
+              {/*break pixel perfect*/}
               <ArrowBottomIcon />
             </ListItemButton>
           </ListItem>

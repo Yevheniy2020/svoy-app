@@ -36,14 +36,14 @@ const ButtonRectangle: FC<ButtonRectangleProps> = ({
           {...rest}
         >
           <Box sx={styles.proto}>
-            {leftIcon && <Box>{leftIcon[0]}</Box>}
+            {leftIcon && leftIcon[0]}
             <Typography sx={styles.text}>{content}</Typography>
-            {rightIcon && <Box>{rightIcon[0]}</Box>}
+            {rightIcon && rightIcon[0]}
           </Box>
           <Box sx={styles.hover}>
-            {leftIcon && leftIcon[1] && <Box>{leftIcon[1]}</Box>}
+            {leftIcon && leftIcon[1] && leftIcon[1]}
             <Typography sx={styles.hoverText}>{content}</Typography>
-            {rightIcon && rightIcon[1] && <Box>{rightIcon[1]}</Box>}
+            {rightIcon && rightIcon[1] && rightIcon[1]}
           </Box>
         </Box>
       </Box>

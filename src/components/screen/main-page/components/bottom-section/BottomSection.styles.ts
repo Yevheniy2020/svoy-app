@@ -6,16 +6,11 @@ export const wrapper = {
   position: 'relative',
   zIndex: '0',
 };
-export const container = {
-  maxWidth: '1200px',
-  width: '100%',
-  margin: '0 auto',
-};
 
 export const img3 = {
   position: 'absolute',
   bottom: '-59px',
-  right: '-158px',
+  right: '-148px',
 };
 
 export const left = {
@@ -25,8 +20,8 @@ export const left = {
 
 export const buttonCircle = {
   position: 'absolute',
-  bottom: '-76px',
-  right: '-259px',
+  bottom: '-73px',
+  right: '-249px',
 };
 
 export const right = {
@@ -35,11 +30,11 @@ export const right = {
   flexDirection: 'column',
   alignItems: 'end',
   position: 'absolute',
-  top: '150px',
-  right: '-534px',
+  top: '151px',
+  right: '-575px',
 };
 export const rightText1 = {
-  mr: '57px',
+  mr: '101px',
   textTransform: 'uppercase',
   typography: theme.typography.h2Regular,
   color: theme.palette.white.main,
