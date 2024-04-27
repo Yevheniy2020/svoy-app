@@ -24,7 +24,6 @@ export const link = (width: string, height: string): SxProps<Theme> => ({
   width: `calc(${width} - 4px)`,
   background: 'white',
   margin: '2px',
-  // marginLeft: '8px',
   borderRadius: '100px',
   //gradient for hover
   '&::after': {
