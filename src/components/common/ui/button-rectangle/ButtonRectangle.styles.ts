@@ -5,6 +5,7 @@ import theme from '@/styles/theme/constants';
 export const wrapper = {
   display: 'flex',
   alignItems: 'center',
+  marginLeft: '5px',
 };
 
 export const hidden = {
@@ -18,11 +19,12 @@ export const link = (width: string, height: string): SxProps<Theme> => ({
   svg: {
     display: 'flex',
   },
-  //due to margin which need gradient
+  //due to margin
   height: `calc(${height} - 4px)`,
   width: `calc(${width} - 4px)`,
   background: 'white',
   margin: '2px',
+  // marginLeft: '8px',
   borderRadius: '100px',
   //gradient for hover
   '&::after': {
@@ -48,6 +50,7 @@ export const link = (width: string, height: string): SxProps<Theme> => ({
     left: '0',
     zIndex: '-1',
     margin: '-2px',
+    // marginLeft: '-8px',
     borderRadius: 'inherit',
     backgroundImage: theme.palette.gradient.main,
   },
