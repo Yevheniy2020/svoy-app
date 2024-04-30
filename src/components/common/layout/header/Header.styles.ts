@@ -1,20 +1,33 @@
+import { SxProps, Theme } from '@mui/material';
+
 import theme from '@/styles/theme/constants';
 
 export const wrapper = {
   background: theme.palette.body.main,
   position: 'relative',
-  zIndex: '0',
+  height: '70px',
+  zIndex: '99999',
 };
 
-export const header = {
+export const header = (
+  scrollDirection: 'down' | 'up' | null,
+): SxProps<Theme> => ({
   maxWidth: '1440px',
+  width: '100%',
+
   padding: '20px  25px',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-between',
   backgroundColor: theme.palette.body.main,
   margin: '0 auto',
-};
+
+  position: 'fixed',
+  top: scrollDirection === 'down' ? '-75px' : '0',
+  left: '50%',
+  transform: 'translateX(-50%)',
+  transition: '0.5s all',
+});
 
 export const navigation = {
   display: 'flex',

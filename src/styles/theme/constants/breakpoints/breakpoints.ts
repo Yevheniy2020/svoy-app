@@ -4,7 +4,7 @@ const breakpoints: BreakpointsOptions = {
   values: {
     mobile: 360,
     mobileSemiMedium: 375,
-    mobileMedium: 480,
+    mobileMedium: 440,
     tablet: 768,
     desktop: 1024,
     desktopSemiMedium: 1200,

@@ -5,6 +5,7 @@ import Link from 'next/link';
 
 import ArrowBottomIcon from '@/components/common/icon/arrow-bottom';
 import MainLogoIcon from '@/components/common/icon/main-logo';
+import useScrollDirection from '@/lib/use-scroll-direction/useScrollDirection';
 
 import * as styles from './Header.styles';
 
@@ -19,9 +20,11 @@ const navItems = [
 ];
 
 const Header: FC = () => {
+  const scrollDirection = useScrollDirection();
+
   return (
     <Box sx={styles.wrapper}>
-      <Box sx={styles.header}>
+      <Box sx={styles.header(scrollDirection)}>
         <Link href={'#'}>
           {/*break pixel perfect*/}
           <MainLogoIcon />

@@ -150,7 +150,7 @@ const typography: TypographyOptions = {
     fontWeight: 600,
     fontSize: 15,
     lineHeight: 1.3,
-    letterSpacing: 0.5,
+    letterSpacing: 1,
   },
   h7SemiBoldMobile: {
     fontFamily: commissionerFont.style.fontFamily,

@@ -7,12 +7,18 @@ export const wrapper = {
 };
 
 export const part1 = {
-  pt: '91.45px',
+  pt: { mobileSemiMedium: '43px', tablet: '91.45px' },
+
   display: 'flex',
-  justifyContent: 'center',
+  justifyContent: { mobileSemiMedium: 'space-between', mobileMedium: 'center' },
+
   position: 'relative',
-  gap: '45px',
-  typography: theme.typography.h1Regular,
+  gap: { mobileSemiMedium: '0', mobileMedium: '45px' },
+  typography: {
+    mobileSemiMedium: theme.typography.h1RegularMobile,
+    tablet: theme.typography.h2Regular,
+    desktopSemiMedium: theme.typography.h1Regular,
+  },
 };
 
 export const part1Relative = {
@@ -20,7 +26,12 @@ export const part1Relative = {
 };
 
 export const part1Text = {
-  typography: theme.typography.h1Regular,
+  typography: {
+    mobileSemiMedium: theme.typography.h1RegularMobile,
+    tablet: theme.typography.h2Regular,
+    desktopSemiMedium: theme.typography.h1Regular,
+  },
+
   color: theme.palette.dark.main,
   transition: 'all .3s',
   position: 'relative',
@@ -50,12 +61,28 @@ export const part1Text = {
 export const part2 = {
   mt: '12px',
   display: 'flex',
-  gap: '100px',
   alignItems: 'center',
+  justifyContent: {
+    mobileSemiMedium: 'space-between',
+    mobileMedium: 'center',
+    desktop: 'space-between',
+  },
+  gap: { mobileSemiMedium: '0', mobileMedium: '48px', desktop: '0' },
 };
 
 export const part2Text = {
-  typography: theme.typography.h1Regular,
+  width: { mobileSemiMedium: 'min-content', desktop: 'auto' },
+  typography: {
+    mobileSemiMedium: theme.typography.h1RegularMobile,
+    tablet: theme.typography.h2Regular,
+    desktop: theme.typography.h2Regular,
+    desktopSemiMedium: theme.typography.h1Regular,
+  },
+};
+
+export const part3Text = {
+  ...part2Text,
+  width: 'max-content',
 };
 
 export const part2Button = {
@@ -65,7 +92,23 @@ export const part2Button = {
 export const part3 = {
   ...part2,
   justifyContent: 'space-between',
-  alignItems: 'start',
+  gap: 0,
+  flexDirection: {
+    mobileSemiMedium: 'column',
+    desktop: 'row',
+  },
+  alignItems: {
+    mobileSemiMedium: 'center',
+    desktop: 'start',
+  },
+  pb: { mobileSemiMedium: '80px', tablet: '132px' },
+};
+export const part3Center = {
+  margin: '0 auto',
+  pb: { mobileSemiMedium: '30px', desktop: '0' },
+  display: { mobileSemiMedium: 'flex', tablet: 'block' },
+  flexDirection: 'column',
+  alignItems: 'end',
 };
 
 export const buttonWrapper = {
@@ -102,13 +145,18 @@ export const part4Text = {
   textTransform: 'uppercase',
   typography: theme.typography.h6SemiBold,
   color: theme.palette.dark.main,
-  pl: '406px',
-  pb: '132px',
+  pl: { mobileSemiMedium: '0', tablet: '406px' },
 };
 
 export const img1 = {
   display: 'flex',
   position: 'relative',
+
+  img: {
+    objectFit: 'contain',
+    width: '100% !important',
+    height: 'unset !important',
+  },
 };
 
 export const ripple = {
