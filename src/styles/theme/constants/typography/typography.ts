@@ -30,7 +30,7 @@ const typography: TypographyOptions = {
     fontSize: 115,
     lineHeight: 1,
     // letterSpacing: 0.3,
-    letterSpacing: 3,
+    letterSpacing: 3.5,
   },
   h2Regular: {
     fontFamily: tenorSansFont.style.fontFamily,
@@ -72,7 +72,7 @@ const typography: TypographyOptions = {
     fontWeight: 600,
     fontSize: 12,
     lineHeight: 1.3,
-    letterSpacing: 1.1,
+    letterSpacing: 1.15,
   },
   bodyHugeMedium: {
     fontFamily: commissionerFont.style.fontFamily,
@@ -115,14 +115,14 @@ const typography: TypographyOptions = {
     fontWeight: 400,
     fontSize: 55,
     lineHeight: 1,
-    letterSpacing: 0.3,
+    letterSpacing: 1.3,
   },
   h2RegularMobile: {
     fontFamily: tenorSansFont.style.fontFamily,
     fontWeight: 400,
     fontSize: 50,
     lineHeight: 1,
-    letterSpacing: 0.3,
+    letterSpacing: 1.3,
   },
   h3RegularMobile: {
     fontFamily: commissionerFont.style.fontFamily,
@@ -149,14 +149,14 @@ const typography: TypographyOptions = {
     fontFamily: commissionerFont.style.fontFamily,
     fontWeight: 600,
     fontSize: 15,
-    lineHeight: 1.3,
-    letterSpacing: 1,
+    lineHeight: 1.2,
+    letterSpacing: 1.4,
   },
   h7SemiBoldMobile: {
     fontFamily: commissionerFont.style.fontFamily,
     fontWeight: 600,
     fontSize: 12,
-    lineHeight: 1.3,
+    lineHeight: 1.5,
     letterSpacing: 1,
   },
   bodyRegularMobile: {

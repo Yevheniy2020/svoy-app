@@ -5,7 +5,7 @@ const MainLogoIcon: FC = props => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={60}
-    height={31}
+    height={30.55}
     fill="none"
     {...props}
   >

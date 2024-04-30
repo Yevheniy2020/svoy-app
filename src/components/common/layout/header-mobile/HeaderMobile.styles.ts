@@ -27,8 +27,8 @@ export const callBorder = {
 
 export const logoBorder = {
   cursor: 'pointer',
-  padding: '10.5px 30px',
-  maxWidth: '117px',
+  width: '117px',
+  height: '50px',
   border: `2px solid ${theme.palette.gray.main}`,
   display: 'flex',
   justifyContent: 'center',
@@ -42,7 +42,7 @@ export const menu = (isHamburgerOpen: boolean): SxProps<Theme> => ({
   display: isHamburgerOpen ? 'block' : 'none',
   // left: '0',
   // width: '100%',
-  pt: '15px',
+  pt: '17px',
   transition: '3s all',
   // zIndex: '99999',
 });
@@ -80,7 +80,7 @@ export const text = {
 };
 
 export const languages = {
-  p: '61px 0 21px 0',
+  p: '62px 0 21px 0',
   display: 'flex',
   gap: '32px',
   justifyContent: 'center',

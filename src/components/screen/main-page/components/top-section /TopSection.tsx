@@ -22,6 +22,7 @@ const TopSection: FC = () => {
   const isDownMobileMedium = useMediaQuery(
     theme.breakpoints.down('mobileMedium'),
   );
+  const isDownTablet = useMediaQuery(theme.breakpoints.down('tablet'));
 
   const [isHover, setIsHover] = useState(false);
 
@@ -46,14 +47,18 @@ const TopSection: FC = () => {
           >
             BUY
           </Typography>
-          <CursorCircle text="EXPLORE" width={isHover ? `180px` : '0'} />
+          <CursorCircle
+            text="EXPLORE"
+            width={isHover && !isDownTablet ? `180px` : '0'}
+            isTablet={isDownTablet}
+          />
         </Box>
         <Box sx={styles.part2}>
           {isDownDesktop ? (
             <ButtonCircle
               sx={styles.part2Button}
               content={<TridentGradientIcon />}
-              width="100px"
+              width="97px"
             />
           ) : (
             <ButtonRectangle
@@ -63,7 +68,10 @@ const TopSection: FC = () => {
               leftIcon={[, <TridentIcon key={0} />]}
             />
           )}
-          <Typography sx={styles.part2Text}>REAL ESTATE</Typography>
+          <Box sx={styles.part2TextContainer}>
+            <Typography sx={styles.part2Text}>REAL</Typography>
+            <Typography sx={styles.part2Text}>ESTATE</Typography>
+          </Box>
         </Box>
         <Box sx={styles.part3}>
           <Box sx={styles.part3Center}>

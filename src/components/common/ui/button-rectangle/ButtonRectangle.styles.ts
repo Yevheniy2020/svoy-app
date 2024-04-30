@@ -5,7 +5,6 @@ import theme from '@/styles/theme/constants';
 export const wrapper = {
   display: 'flex',
   alignItems: 'center',
-  marginLeft: '5px',
 };
 
 export const hidden = {

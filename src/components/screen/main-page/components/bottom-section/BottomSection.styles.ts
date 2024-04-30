@@ -22,19 +22,20 @@ export const leftPosition = {
 };
 
 export const img2 = {
-  img: { width: { mobileSemiMedium: '262px', mobileMedium: '100%' } },
+  img: { width: { mobileSemiMedium: '262px', mobileMedium: '534px' } },
 };
 export const img3 = {
   position: 'absolute',
-  bottom: '-59px',
+  bottom: { mobileSemiMedium: '-75px', tablet: '-59px' },
+
   right: { mobileSemiMedium: '0', tablet: '-148px' },
   img: { width: { mobileSemiMedium: '212px', mobileMedium: '387px' } },
 };
 
 export const buttonCircle = {
   position: 'absolute',
-  bottom: '-10px',
-  right: '-90px',
+  bottom: '-15px',
+  right: '-100px',
 };
 
 export const right = {
@@ -44,7 +45,7 @@ export const right = {
   alignItems: 'end',
   position: 'absolute',
   top: '151px',
-  right: { desktop: '-42vw', desktopSemiMedium: '-575px' },
+  right: { desktop: '-42vw', desktopSemiMedium: '-578px' },
 };
 export const rightText1 = {
   mr: { desktop: '0', desktopSemiMedium: '101px' },
@@ -66,13 +67,14 @@ export const rightText2 = {
 };
 export const rightText3 = {
   pt: '43px',
-  maxWidth: '306px',
+  maxWidth: '307px',
   typography: theme.typography.bodyRegular,
   color: theme.palette.white.main,
 };
 
 export const rightText1Hidden = {
   pl: '27px',
+  pt: '55px',
   position: 'relative',
   zIndex: '10',
   textTransform: 'uppercase',
@@ -86,6 +88,7 @@ export const rightText1Hidden = {
 
 export const rightText2Hidden = {
   pl: '27px',
+  pt: '5px',
   textTransform: 'uppercase',
   typography: {
     mobileSemiMedium: theme.typography.h2RegularMobile,
