@@ -7,7 +7,7 @@ export const wrapper = {
 };
 
 export const part1 = {
-  pt: { mobileSemiMedium: '43px', tablet: '91.45px' },
+  pt: { mobileSemiMedium: '43px', tablet: '92.45px' },
 
   display: 'flex',
   justifyContent: { mobileSemiMedium: 'space-between', mobileMedium: 'center' },
@@ -60,6 +60,7 @@ export const part1Text = {
 
 export const part2 = {
   mt: '12px',
+
   display: 'flex',
   alignItems: 'center',
   justifyContent: {
@@ -104,7 +105,6 @@ export const part3 = {
   pb: { mobileSemiMedium: '80px', tablet: '132px' },
 };
 export const part3Center = {
-  margin: '0 auto',
   pb: { mobileSemiMedium: '30px', desktop: '0' },
   display: { mobileSemiMedium: 'flex', tablet: 'block' },
   flexDirection: 'column',
@@ -113,7 +113,7 @@ export const part3Center = {
 
 export const buttonWrapper = {
   mt: '14px',
-  mr: '5px',
+  mr: '2px',
 };
 
 export const part3Button = {
@@ -161,7 +161,7 @@ export const img1 = {
 
 export const ripple = {
   position: 'absolute',
-  top: '-80px',
+  top: '-78px',
   left: '50%',
-  transform: 'translateX(-52%)',
+  transform: 'translateX(-50%)',
 };

@@ -30,7 +30,7 @@ const typography: TypographyOptions = {
     fontSize: 115,
     lineHeight: 1,
     // letterSpacing: 0.3,
-    letterSpacing: 3,
+    letterSpacing: 3.5,
   },
   h2Regular: {
     fontFamily: tenorSansFont.style.fontFamily,
@@ -72,7 +72,7 @@ const typography: TypographyOptions = {
     fontWeight: 600,
     fontSize: 12,
     lineHeight: 1.3,
-    letterSpacing: 1.1,
+    letterSpacing: 1.15,
   },
   bodyHugeMedium: {
     fontFamily: commissionerFont.style.fontFamily,

@@ -9,9 +9,18 @@ export const wrapper = {
   zIndex: '99999',
 };
 
-export const header = (
+export const fixed = (
   scrollDirection: 'down' | 'up' | null,
 ): SxProps<Theme> => ({
+  backgroundColor: theme.palette.body.main,
+  width: '100%',
+  position: 'fixed',
+  top: scrollDirection === 'down' ? '-75px' : '0',
+  left: '50%',
+  transform: 'translateX(-50%)',
+  transition: '0.5s all',
+});
+export const header = {
   maxWidth: '1440px',
   width: '100%',
 
@@ -21,13 +30,7 @@ export const header = (
   justifyContent: 'space-between',
   backgroundColor: theme.palette.body.main,
   margin: '0 auto',
-
-  position: 'fixed',
-  top: scrollDirection === 'down' ? '-75px' : '0',
-  left: '50%',
-  transform: 'translateX(-50%)',
-  transition: '0.5s all',
-});
+};
 
 export const navigation = {
   display: 'flex',
@@ -68,7 +71,7 @@ export const button = {
 
 export const textLang = {
   ...text,
-  mr: '8px',
+  mr: '4px',
 };
 
 export const item = {

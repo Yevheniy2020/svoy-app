@@ -1,7 +1,6 @@
 'use client';
 import React, { FC } from 'react';
 import { Box, List, ListItem, ListItemButton, Typography } from '@mui/material';
-import Link from 'next/link';
 
 import ArrowBottomIcon from '@/components/common/icon/arrow-bottom';
 import MainLogoIcon from '@/components/common/icon/main-logo';
@@ -24,32 +23,31 @@ const Header: FC = () => {
 
   return (
     <Box sx={styles.wrapper}>
-      <Box sx={styles.header(scrollDirection)}>
-        <Link href={'#'}>
-          {/*break pixel perfect*/}
+      <Box sx={styles.fixed(scrollDirection)}>
+        <Box sx={styles.header}>
           <MainLogoIcon />
-        </Link>
-        <List sx={styles.navigation}>
-          <ListItem sx={styles.item} disablePadding>
-            <ListItemButton disableRipple sx={styles.button}>
-              <Typography sx={styles.text}>for ukrainians</Typography>
-            </ListItemButton>
-          </ListItem>
-          {navItems.map(item => (
-            <ListItem key={item} disablePadding>
+          <List sx={styles.navigation}>
+            <ListItem sx={styles.item} disablePadding>
               <ListItemButton disableRipple sx={styles.button}>
-                <Typography sx={styles.text}>{item}</Typography>
+                <Typography sx={styles.text}>for ukrainians</Typography>
               </ListItemButton>
             </ListItem>
-          ))}
-          <ListItem disablePadding>
-            <ListItemButton disableRipple sx={styles.button}>
-              <Typography sx={styles.textLang}>ENG</Typography>
-              {/*break pixel perfect*/}
-              <ArrowBottomIcon />
-            </ListItemButton>
-          </ListItem>
-        </List>
+            {navItems.map(item => (
+              <ListItem key={item} disablePadding>
+                <ListItemButton disableRipple sx={styles.button}>
+                  <Typography sx={styles.text}>{item}</Typography>
+                </ListItemButton>
+              </ListItem>
+            ))}
+            <ListItem disablePadding>
+              <ListItemButton disableRipple sx={styles.button}>
+                <Typography sx={styles.textLang}>ENG</Typography>
+                {/*break pixel perfect*/}
+                <ArrowBottomIcon />
+              </ListItemButton>
+            </ListItem>
+          </List>
+        </Box>
       </Box>
     </Box>
   );

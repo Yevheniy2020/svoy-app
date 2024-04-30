@@ -12,6 +12,7 @@ import * as styles from './BottomSection.styles';
 
 const BottomSection: FC = () => {
   const isDownDesktop = useMediaQuery(theme.breakpoints.down('desktop'));
+  const isDownTablet = useMediaQuery(theme.breakpoints.down('tablet'));
 
   return (
     <Box sx={styles.wrapper}>
@@ -21,7 +22,7 @@ const BottomSection: FC = () => {
             <Box sx={styles.img2}>
               <Image
                 src="/img/main/img2.jpg"
-                width={533}
+                width={534}
                 height={691}
                 alt={'the beautiful house'}
               />
@@ -38,6 +39,7 @@ const BottomSection: FC = () => {
                 <ButtonMagnetic
                   width="180px"
                   content="LEARN MORE"
+                  isTablet={isDownTablet}
                   sx={styles.buttonCircle}
                 />
               )}
@@ -69,6 +71,7 @@ const BottomSection: FC = () => {
             <ButtonMagnetic
               width="180px"
               content="LEARN MORE"
+              isTablet={isDownTablet}
               sx={styles.buttonCircleHidden}
             />
           </Box>

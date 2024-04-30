@@ -11,12 +11,14 @@ interface CursorCircleProps {
   width: string;
   text: string;
   sx?: SxProps<Theme>;
+  isTablet?: boolean;
 }
 
 const CursorCircle: FC<CursorCircleProps> = ({
   width = '0',
   text,
   sx = {},
+  isTablet = false,
 }) => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isActive, setIsActive] = useState(false);
@@ -26,12 +28,14 @@ const CursorCircle: FC<CursorCircleProps> = ({
   }, [width]);
 
   useEffect(() => {
-    const updatePosition = (event: MouseEvent) => {
-      setPosition({ x: event.clientX, y: event.clientY });
-    };
-    window.addEventListener('mousemove', updatePosition);
-    return () => window.removeEventListener('mousemove', updatePosition);
-  }, []);
+    if (!isTablet) {
+      const updatePosition = (event: MouseEvent) => {
+        setPosition({ x: event.clientX, y: event.clientY });
+      };
+      window.addEventListener('mousemove', updatePosition);
+      return () => window.removeEventListener('mousemove', updatePosition);
+    }
+  }, [isTablet]);
 
   return (
     <ButtonCircle

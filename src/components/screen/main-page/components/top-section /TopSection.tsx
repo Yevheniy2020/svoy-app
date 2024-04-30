@@ -22,6 +22,7 @@ const TopSection: FC = () => {
   const isDownMobileMedium = useMediaQuery(
     theme.breakpoints.down('mobileMedium'),
   );
+  const isDownTablet = useMediaQuery(theme.breakpoints.down('tablet'));
 
   const [isHover, setIsHover] = useState(false);
 
@@ -46,7 +47,11 @@ const TopSection: FC = () => {
           >
             BUY
           </Typography>
-          <CursorCircle text="EXPLORE" width={isHover ? `180px` : '0'} />
+          <CursorCircle
+            text="EXPLORE"
+            width={isHover && !isDownTablet ? `180px` : '0'}
+            isTablet={isDownTablet}
+          />
         </Box>
         <Box sx={styles.part2}>
           {isDownDesktop ? (

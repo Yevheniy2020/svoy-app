@@ -22,7 +22,7 @@ export const leftPosition = {
 };
 
 export const img2 = {
-  img: { width: { mobileSemiMedium: '262px', mobileMedium: '100%' } },
+  img: { width: { mobileSemiMedium: '262px', mobileMedium: '534px' } },
 };
 export const img3 = {
   position: 'absolute',
@@ -33,8 +33,8 @@ export const img3 = {
 
 export const buttonCircle = {
   position: 'absolute',
-  bottom: '-10px',
-  right: '-90px',
+  bottom: '-15px',
+  right: '-100px',
 };
 
 export const right = {
@@ -44,7 +44,7 @@ export const right = {
   alignItems: 'end',
   position: 'absolute',
   top: '151px',
-  right: { desktop: '-42vw', desktopSemiMedium: '-575px' },
+  right: { desktop: '-42vw', desktopSemiMedium: '-578px' },
 };
 export const rightText1 = {
   mr: { desktop: '0', desktopSemiMedium: '101px' },
@@ -66,7 +66,7 @@ export const rightText2 = {
 };
 export const rightText3 = {
   pt: '43px',
-  maxWidth: '306px',
+  maxWidth: '307px',
   typography: theme.typography.bodyRegular,
   color: theme.palette.white.main,
 };
