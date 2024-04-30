@@ -58,7 +58,7 @@ const TopSection: FC = () => {
             <ButtonCircle
               sx={styles.part2Button}
               content={<TridentGradientIcon />}
-              width="100px"
+              width="97px"
             />
           ) : (
             <ButtonRectangle
@@ -68,7 +68,10 @@ const TopSection: FC = () => {
               leftIcon={[, <TridentIcon key={0} />]}
             />
           )}
-          <Typography sx={styles.part2Text}>REAL ESTATE</Typography>
+          <Box sx={styles.part2TextContainer}>
+            <Typography sx={styles.part2Text}>REAL</Typography>
+            <Typography sx={styles.part2Text}>ESTATE</Typography>
+          </Box>
         </Box>
         <Box sx={styles.part3}>
           <Box sx={styles.part3Center}>

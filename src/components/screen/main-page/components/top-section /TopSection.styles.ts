@@ -31,7 +31,10 @@ export const part1Text = {
     tablet: theme.typography.h2Regular,
     desktopSemiMedium: theme.typography.h1Regular,
   },
-
+  pr: {
+    mobileSemiMedium: '5px',
+    tablet: '0',
+  },
   color: theme.palette.dark.main,
   transition: 'all .3s',
   position: 'relative',
@@ -59,8 +62,8 @@ export const part1Text = {
 };
 
 export const part2 = {
+  // mt: '8px',
   mt: '12px',
-
   display: 'flex',
   alignItems: 'center',
   justifyContent: {
@@ -71,6 +74,11 @@ export const part2 = {
   gap: { mobileSemiMedium: '0', mobileMedium: '48px', desktop: '0' },
 };
 
+export const part2TextContainer = {
+  display: 'flex',
+  flexDirection: { mobileSemiMedium: 'column', desktop: 'row' },
+  gap: { mobileSemiMedium: '7px', desktop: '46px' },
+};
 export const part2Text = {
   width: { mobileSemiMedium: 'min-content', desktop: 'auto' },
   typography: {
@@ -84,6 +92,10 @@ export const part2Text = {
 export const part3Text = {
   ...part2Text,
   width: 'max-content',
+  pr: {
+    mobileSemiMedium: '5px',
+    tablet: '0',
+  },
 };
 
 export const part2Button = {
@@ -102,10 +114,10 @@ export const part3 = {
     mobileSemiMedium: 'center',
     desktop: 'start',
   },
-  pb: { mobileSemiMedium: '80px', tablet: '132px' },
+  pb: { mobileSemiMedium: '85px', tablet: '132px' },
 };
 export const part3Center = {
-  pb: { mobileSemiMedium: '30px', desktop: '0' },
+  pb: { mobileSemiMedium: '25px', desktop: '0' },
   display: { mobileSemiMedium: 'flex', tablet: 'block' },
   flexDirection: 'column',
   alignItems: 'end',
@@ -143,9 +155,12 @@ export const part3Button = {
 
 export const part4Text = {
   textTransform: 'uppercase',
-  typography: theme.typography.h6SemiBold,
+  typography: {
+    mobileSemiMedium: theme.typography.h7SemiBoldMobile,
+    tablet: theme.typography.h6SemiBold,
+  },
   color: theme.palette.dark.main,
-  pl: { mobileSemiMedium: '0', tablet: '406px' },
+  p: { mobileSemiMedium: '0 16px 0 0', tablet: '0 0 0 406px' },
 };
 
 export const img1 = {

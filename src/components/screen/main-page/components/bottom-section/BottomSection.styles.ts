@@ -26,7 +26,8 @@ export const img2 = {
 };
 export const img3 = {
   position: 'absolute',
-  bottom: '-59px',
+  bottom: { mobileSemiMedium: '-75px', tablet: '-59px' },
+
   right: { mobileSemiMedium: '0', tablet: '-148px' },
   img: { width: { mobileSemiMedium: '212px', mobileMedium: '387px' } },
 };
@@ -73,6 +74,7 @@ export const rightText3 = {
 
 export const rightText1Hidden = {
   pl: '27px',
+  pt: '55px',
   position: 'relative',
   zIndex: '10',
   textTransform: 'uppercase',
@@ -86,6 +88,7 @@ export const rightText1Hidden = {
 
 export const rightText2Hidden = {
   pl: '27px',
+  pt: '5px',
   textTransform: 'uppercase',
   typography: {
     mobileSemiMedium: theme.typography.h2RegularMobile,

@@ -14,8 +14,8 @@ const navItems = [
   'BUY',
   'SELL',
   'BLOG',
-  'About',
   'SERVICES',
+  'About',
   'Contact',
 ];
 
