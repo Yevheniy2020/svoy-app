@@ -23,7 +23,6 @@ const TopSection: FC = () => {
     theme.breakpoints.down('mobileMedium'),
   );
   const isDownTablet = useMediaQuery(theme.breakpoints.down('tablet'));
-
   const [isHover, setIsHover] = useState(false);
 
   return (
@@ -65,7 +64,7 @@ const TopSection: FC = () => {
               sx={styles.part2Button}
               content="SUPPORT UKRAINE"
               width={'293px'}
-              leftIcon={[, <TridentIcon key={0} />]}
+              leftIcon={[null, <TridentIcon key={0} />]}
             />
           )}
           <Box sx={styles.part2TextContainer}>

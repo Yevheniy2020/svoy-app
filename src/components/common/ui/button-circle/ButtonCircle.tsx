@@ -26,8 +26,8 @@ const ButtonCircle: FC<ButtonCircleProps> = ({
     <Box
       sx={mergeSx(styles.link(width, hover), sx)}
       onClick={onClick}
-      {...rest}
       ref={buttonRef}
+      {...rest}
     >
       <Typography sx={styles.text}>{content}</Typography>
     </Box>

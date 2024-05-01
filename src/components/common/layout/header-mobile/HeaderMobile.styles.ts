@@ -37,14 +37,9 @@ export const logoBorder = {
 };
 
 export const menu = (isHamburgerOpen: boolean): SxProps<Theme> => ({
-  // position: 'absolute',
-  // top: isHamburgerOpen ? 'auto' : '-100vh',
   display: isHamburgerOpen ? 'block' : 'none',
-  // left: '0',
-  // width: '100%',
   pt: '17px',
   transition: '3s all',
-  // zIndex: '99999',
 });
 export const list = { p: '0' };
 

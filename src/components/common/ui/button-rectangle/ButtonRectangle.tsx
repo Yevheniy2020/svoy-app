@@ -7,8 +7,8 @@ import * as styles from './ButtonRectangle.styles';
 
 interface ButtonRectangleProps {
   content: string | ReactNode;
-  //first icon - default icon for button
-  //second icon - icon for hover effect
+  //first element in arr rightIcon & leftIcon - default icon for button
+  //second element in arr rightIcon & leftIcon - icon for hover effect
   rightIcon?: [ReactNode?, ReactNode?];
   leftIcon?: [ReactNode?, ReactNode?];
   width: string;

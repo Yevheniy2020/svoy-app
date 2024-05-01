@@ -1,18 +1,18 @@
 import theme from '@/styles/theme/constants';
 
-export const button1 = {
+export const button = {
   '&::before': {
     backgroundImage: 'none',
   },
   '& p': {
     backgroundImage: 'none',
-    '-webkit-text-fill-color': theme.palette.dark.main,
-    '-moz-text-fill-color': theme.palette.dark.main,
+    WebkitTextFillColor: theme.palette.dark.main,
+    MozTextFillColor: theme.palette.dark.main,
   },
   '&:hover': {
     '& p': {
-      '-webkit-text-fill-color': theme.palette.white.main,
-      '-moz-text-fill-color': theme.palette.white.main,
+      WebkitTextFillColor: theme.palette.white.main,
+      MozTextFillColor: theme.palette.white.main,
     },
   },
   '&::after': {

@@ -10,6 +10,7 @@ interface RippleEffectProps {
   width?: string;
   height?: string;
   sx?: SxProps<Theme>;
+  //3 levels delay
   delay?: [string?, string?, string?];
 }
 const RippleEffect: FC<RippleEffectProps> = ({
@@ -21,6 +22,7 @@ const RippleEffect: FC<RippleEffectProps> = ({
 }) => {
   return (
     <Box sx={mergeSx(styles.circles(width, height), sx)} {...rest}>
+      {/*//with default values*/}
       <Box sx={styles.circle(delay[0] || '1.1s')} />
       <Box sx={styles.circle(delay[1] || '1s')} />
       <Box sx={styles.circleCenter(delay[2] || '1.3s')} />

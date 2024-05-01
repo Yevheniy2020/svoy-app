@@ -2,26 +2,6 @@ import { SxProps, Theme } from '@mui/material';
 
 import theme from '@/styles/theme/constants';
 
-export const cursor = (
-  left: number,
-  top: number,
-  width: string,
-  height: string,
-): SxProps<Theme> => ({
-  position: 'fixed',
-  pointerEvents: 'none',
-  zIndex: '1',
-  transform: 'translate(-50%, -50%)',
-  left: `${left}px`,
-  top: `${top}px`,
-  transition: 'width 0.5s, height 0.5s',
-
-  width: `${width}`,
-  height: `${height}`,
-  borderRadius: '100px',
-  background: theme.palette.orange.main,
-});
-
 export const text = {
   position: 'absolute',
   top: '50%',
@@ -35,7 +15,7 @@ export const text = {
   transition: 'all 2s',
 };
 
-export const cursorTest = (left: number, top: number): SxProps<Theme> => ({
+export const cursor = (left: number, top: number): SxProps<Theme> => ({
   background: theme.palette.orange.main,
   margin: '0',
   '&::before': {
