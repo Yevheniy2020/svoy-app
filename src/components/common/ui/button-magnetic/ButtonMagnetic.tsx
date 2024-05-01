@@ -8,6 +8,7 @@ import mergeSxStyles from '@/lib/utils/mergeSxStyles';
 
 import * as styles from './ButtonMagnetic.styles';
 
+//make a component that is a wrapper over another component.
 export type ButtonMagneticProps = Omit<ButtonCircleProps, 'buttonRef'> & {
   isTablet?: boolean;
 };
@@ -17,12 +18,13 @@ const MagneticButton: FC<ButtonMagneticProps> = ({
   sx = {},
   onClick,
   hover = true,
-  isTablet = true,
+  isTablet,
   ...rest
 }) => {
   const ref = useRef<HTMLButtonElement>(null);
   const [childStyle, setChildStyle] = useState({});
 
+  //handles doesn't work if isTablet true
   const handleMouseMove = useCallback(
     (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
       if (!isTablet) {

@@ -27,6 +27,7 @@ const CursorCircle: FC<CursorCircleProps> = ({
     setIsActive(width !== '0');
   }, [width]);
 
+  // doesn't work if isTablet true
   useEffect(() => {
     if (!isTablet) {
       const updatePosition = (event: MouseEvent) => {
@@ -39,7 +40,7 @@ const CursorCircle: FC<CursorCircleProps> = ({
 
   return (
     <ButtonCircle
-      sx={mergeSx(styles.cursorTest(position.x, position.y), sx)}
+      sx={mergeSx(styles.cursor(position.x, position.y), sx)}
       content={isActive && text}
       width={width}
     />

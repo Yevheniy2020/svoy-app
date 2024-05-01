@@ -22,36 +22,36 @@ const ButtonRectanglePage: FC = () => {
     >
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
         <ButtonRectangle
-          sx={styles.button1}
+          sx={styles.button}
           content="WHOLE COLLECTION"
           width={'400px'}
         />
         <ButtonRectangle
-          sx={styles.button1}
+          sx={styles.button}
           content="WHOLE COLLECTION"
           width={'400px'}
           rightIcon={[<ArrowRightIcon key={0} />]}
         />
         <ButtonRectangle
-          sx={styles.button1}
+          sx={styles.button}
           content="WHOLE COLLECTION"
           width={'400px'}
-          rightIcon={[, <ArrowRightIcon key={0} />]}
+          rightIcon={[null, <ArrowRightIcon key={0} />]}
         />
         <ButtonRectangle
-          sx={styles.button1}
+          sx={styles.button}
           content="WHOLE COLLECTION"
           width={'400px'}
           leftIcon={[<ArrowRightIcon key={0} />]}
         />
         <ButtonRectangle
-          sx={styles.button1}
+          sx={styles.button}
           content="WHOLE COLLECTION"
           width={'400px'}
-          leftIcon={[, <ArrowRightIcon key={0} />]}
+          leftIcon={[null, <ArrowRightIcon key={0} />]}
         />
         <ButtonRectangle
-          sx={styles.button1}
+          sx={styles.button}
           content="WHOLE COLLECTION"
           width={'400px'}
           leftIcon={[
@@ -60,7 +60,7 @@ const ButtonRectanglePage: FC = () => {
           ]}
         />
         <ButtonRectangle
-          sx={styles.button1}
+          sx={styles.button}
           content="WHOLE COLLECTION"
           width={'400px'}
           rightIcon={[
@@ -79,7 +79,7 @@ const ButtonRectanglePage: FC = () => {
         <ButtonRectangle
           content="WHOLE COLLECTION"
           width={'400px'}
-          rightIcon={[, <TridentIcon key={0} />]}
+          rightIcon={[null, <TridentIcon key={0} />]}
         />
         <ButtonRectangle
           content="WHOLE COLLECTION"
@@ -89,7 +89,7 @@ const ButtonRectanglePage: FC = () => {
         <ButtonRectangle
           content="WHOLE COLLECTION"
           width={'400px'}
-          leftIcon={[, <TridentIcon key={0} />]}
+          leftIcon={[null, <TridentIcon key={0} />]}
         />
         <ButtonRectangle
           content="WHOLE COLLECTION"

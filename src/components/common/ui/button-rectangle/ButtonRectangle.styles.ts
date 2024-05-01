@@ -48,7 +48,6 @@ export const link = (width: string, height: string): SxProps<Theme> => ({
     left: '0',
     zIndex: '-1',
     margin: '-2px',
-    // marginLeft: '-8px',
     borderRadius: 'inherit',
     backgroundImage: theme.palette.gradient.main,
   },
@@ -100,8 +99,8 @@ export const text = {
   color: theme.palette.white.main,
   //gradient text
   backgroundImage: theme.palette.gradient.main,
-  '-webkit-background-clip': 'text',
-  '-webkit-text-fill-color': 'transparent',
-  '-moz-background-clip': 'text',
-  '-moz-text-fill-color': 'transparent',
+  WebkitBackgroundClip: 'text',
+  WebkitTextFillColor: 'transparent',
+  MozBackgroundClip: 'text',
+  MozTextFillColor: 'transparent',
 };

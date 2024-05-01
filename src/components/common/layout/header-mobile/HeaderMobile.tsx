@@ -38,6 +38,7 @@ const HeaderMobile: FC = () => {
           isOpen={isHamburgerOpen}
         />
       </Box>
+      {/*instead of the tags li ul and nav*/}
       <Box sx={styles.menu(isHamburgerOpen)}>
         <List sx={styles.list}>
           {navItems.map(item => (

@@ -4,7 +4,7 @@ import { Box, List, ListItem, ListItemButton, Typography } from '@mui/material';
 
 import ArrowBottomIcon from '@/components/common/icon/arrow-bottom';
 import MainLogoIcon from '@/components/common/icon/main-logo';
-import useScrollDirection from '@/lib/use-scroll-direction/useScrollDirection';
+import useScrollDirection from '@/hooks/use-scroll-direction/useScrollDirection';
 
 import * as styles from './Header.styles';
 
@@ -19,6 +19,7 @@ const navItems = [
 ];
 
 const Header: FC = () => {
+  //custom hook
   const scrollDirection = useScrollDirection();
 
   return (
@@ -26,6 +27,7 @@ const Header: FC = () => {
       <Box sx={styles.fixed(scrollDirection)}>
         <Box sx={styles.header}>
           <MainLogoIcon />
+          {/*instead of the tags li ul and nav*/}
           <List sx={styles.navigation}>
             <ListItem sx={styles.item} disablePadding>
               <ListItemButton disableRipple sx={styles.button}>
@@ -42,7 +44,7 @@ const Header: FC = () => {
             <ListItem disablePadding>
               <ListItemButton disableRipple sx={styles.button}>
                 <Typography sx={styles.textLang}>ENG</Typography>
-                {/*break pixel perfect*/}
+                {/*svg break pixel perfect*/}
                 <ArrowBottomIcon />
               </ListItemButton>
             </ListItem>

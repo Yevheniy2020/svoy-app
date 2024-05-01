@@ -53,7 +53,7 @@ export const part1Text = {
   '&:hover': {
     cursor: 'none',
     color: theme.palette.white.main,
-    '-webkit-text-stroke': `2px ${theme.palette.dark.main}`,
+    WebkitTextStroke: `2px ${theme.palette.dark.main}`,
     textStroke: `2px ${theme.palette.dark.main}`,
   },
   '&:hover::after': {
@@ -62,7 +62,6 @@ export const part1Text = {
 };
 
 export const part2 = {
-  // mt: '8px',
   mt: '12px',
   display: 'flex',
   alignItems: 'center',
@@ -136,13 +135,13 @@ export const part3Button = {
   },
   '& p': {
     backgroundImage: 'none',
-    '-webkit-text-fill-color': theme.palette.dark.main,
-    '-moz-text-fill-color': theme.palette.dark.main,
+    WebkitTextFillColor: theme.palette.dark.main,
+    MozTextFillColor: theme.palette.dark.main,
   },
   '&:hover': {
     '& p': {
-      '-webkit-text-fill-color': theme.palette.white.main,
-      '-moz-text-fill-color': theme.palette.white.main,
+      WebkitTextFillColor: theme.palette.white.main,
+      MozTextFillColor: theme.palette.white.main,
     },
   },
   '&::after': {
