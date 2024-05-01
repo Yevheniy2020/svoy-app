@@ -6,6 +6,8 @@ declare module '@mui/material/styles' {
     body: Palette['primary'];
     dark: Palette['primary'];
     white: Palette['primary'];
+    gradient: Palette['primary'];
+    gray: Palette['primary'];
   }
 
   interface PaletteOptions {
@@ -13,5 +15,7 @@ declare module '@mui/material/styles' {
     body?: PaletteOptions['primary'];
     dark?: PaletteOptions['primary'];
     white?: PaletteOptions['primary'];
+    gradient?: PaletteOptions['primary'];
+    gray?: PaletteOptions['primary'];
   }
 }

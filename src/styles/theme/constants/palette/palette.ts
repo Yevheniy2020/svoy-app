@@ -13,6 +13,12 @@ const palette: PaletteOptions = {
   white: {
     main: '#FFFFFF',
   },
+  gray: {
+    main: '#F1EADE',
+  },
+  gradient: {
+    main: 'linear-gradient(90deg, rgba(0,87,184,1) 0%, rgba(255,215,0,1) 100%)',
+  },
 };
 
 export default palette;
